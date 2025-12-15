@@ -1,4 +1,4 @@
-# 🌟 Sahithi Meneni — Portfolio Website
+# 🌟 Sahithi Meneni - Portfolio Website
 
 A modern, responsive **personal portfolio website** showcasing my skills, projects, certifications, and achievements in **AI, Data Science, Machine Learning, and Frontend Development**.
 
