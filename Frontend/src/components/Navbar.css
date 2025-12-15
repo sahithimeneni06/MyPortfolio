@@ -1,0 +1,266 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f8fafc;
+  
+  color: #1f2937;
+}
+
+.custom-navbar {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.85),
+    rgba(255, 255, 255, 0.95)
+  );
+  backdrop-filter: blur(14px);
+  padding: 1.2rem 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.12);
+  z-index: 1000;
+  border-radius:20px;
+    margin: 8px;
+}
+
+.custom-navbar.navbar-scrolled {
+  padding: 0.55rem 0;
+  background: rgba(255, 255, 255, 0.96);
+  background: transparent;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================= */
+/* BRAND */
+/* ============================= */
+.brand-text {
+  position: relative;
+  text-decoration: none;
+}
+
+.brand-gradient {
+  background: linear-gradient(
+    90deg,
+    #653482,
+    #8f61aa,
+    #b99fc7
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  font-size: 1.6rem;
+  letter-spacing: 1.5px;
+  animation: shimmer 6s linear infinite;
+}
+.brand-subgrad {
+  background: linear-gradient(
+    90deg,
+    #3b3b6c,
+    #6e6b9d,
+    #9598c9
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  font-size: 1.6rem;
+  letter-spacing: 1.5px;
+  animation: shimmer 6s linear infinite;
+}
+.brand-subgrad:hover{
+  font-weight: 800;
+  font-size: 1.8rem;
+  
+}
+.brand-gradient:hover{
+  font-weight: 800;
+  font-size: 1.8rem;
+  
+}
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.brand-underline {
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  
+}
+
+.brand-text:hover .brand-underline {
+  width: 100%;
+}
+
+/* ============================= */
+/* NAV LINKS */
+/* ============================= */
+.nav-link {
+  color: #1f2937 !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.4px;
+  padding: 0.5rem 1rem !important;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.link-text {
+  position: relative;
+  z-index: 2;
+}
+
+.link-underline {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #6366F1, #22D3EE);
+  border-radius: 2px;
+  transition: width 0.35s ease;
+}
+
+.link-hover-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.12),
+    rgba(34, 211, 238, 0.12)
+  );
+  border-radius: 8px;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.nav-link:hover {
+  color: #6366F1 !important;
+}
+
+.nav-link:hover .link-underline {
+  width: 80%;
+}
+
+.nav-link:hover .link-hover-bg {
+  transform: scale(1);
+}
+
+/* ============================= */
+/* ACTIVE LINK */
+/* ============================= */
+.active-link {
+  color: #6366F1 !important;
+}
+
+.active-link .link-underline {
+  width: 80%;
+}
+
+.active-link .link-hover-bg {
+  transform: scale(1);
+  background: rgba(99, 102, 241, 0.15);
+}
+
+/* ============================= */
+/* TOGGLER */
+/* ============================= */
+.custom-toggler {
+  border: none;
+  outline: none;
+}
+
+.custom-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.toggler-line {
+  display: block;
+  width: 25px;
+  height: 2px;
+  margin: 5px 0;
+  background: linear-gradient(90deg, #6366F1, #22D3EE);
+  transition: all 0.3s ease;
+}
+
+.custom-toggler[aria-expanded="true"] .toggler-line-1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.custom-toggler[aria-expanded="true"] .toggler-line-2 {
+  opacity: 0;
+}
+
+.custom-toggler[aria-expanded="true"] .toggler-line-3 {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ============================= */
+/* HIRE ME BUTTON */
+/* ============================= */
+.btn-hire {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.7rem 1.5rem;
+  background: linear-gradient(135deg, #6366F1, #22D3EE);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+}
+
+.btn-hire:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(99, 102, 241, 0.4);
+  color: #fff;
+}
+
+.btn-hire svg {
+  transition: transform 0.3s ease;
+}
+
+.btn-hire:hover svg {
+  transform: translateX(5px);
+}
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(18px);
+    border-radius: 14px;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    border: 1px solid rgba(99, 102, 241, 0.12);
+  }
+
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+
+  .btn-hire {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
