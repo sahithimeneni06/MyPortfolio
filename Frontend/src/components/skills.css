@@ -13,6 +13,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
+  color-scheme: light;
 }
 
 /* Animated Background */
@@ -620,40 +621,40 @@
 /* ============================= */
 /* DARK MODE SUPPORT */
 /* ============================= */
-
 @media (prefers-color-scheme: dark) {
   .skills-section {
-    background: 
-      linear-gradient(180deg, #0f172a 0%, #1e293b 100%),
-      radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 35%);
+    background:
+      linear-gradient(180deg, #f8fafc 0%, #ffffff 100%) !important;
   }
-  
-  .skill-card {
-    background: rgba(30, 41, 59, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  .card-title, .progress-title, .progress-percent {
-    color: #f1f5f9;
-  }
-  
-  .card-description, .skills-subtitle, .progress-label {
-    color: #94a3b8;
-  }
-  
-  .skill-tag {
-    background: rgba(51, 65, 85, 0.8);
-    color: #e2e8f0;
-  }
-  
+
+  .skill-card,
   .skill-progress-section {
-    background: rgba(30, 41, 59, 0.7);
+    background: rgba(255, 255, 255, 0.85) !important;
+    border: 1px solid rgba(255, 255, 255, 0.4);
   }
-  
+
+  .card-title,
+  .progress-title,
+  .progress-percent {
+    color: #020617 !important;
+  }
+
+  .card-description,
+  .skills-subtitle,
+  .progress-label {
+    color: #64748b !important;
+  }
+
+  .skill-tag {
+    background: white !important;
+    color: #020617 !important;
+  }
+
   .progress-bar {
-    background: rgba(71, 85, 105, 0.6);
+    background: rgba(226, 232, 240, 0.8) !important;
   }
 }
+
 
 /* Individual card animations */
 .skill-card:nth-child(1) { transition-delay: 0.1s; }
